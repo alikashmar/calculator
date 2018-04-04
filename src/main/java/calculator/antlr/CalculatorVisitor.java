@@ -1,8 +1,7 @@
-// Generated from Calculator.g4 by ANTLR 4.3
+// Generated from Calculator.g4 by ANTLR 4.7.1
 
 package calculator.antlr;
 
-import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -14,23 +13,21 @@ import org.antlr.v4.runtime.tree.ParseTreeVisitor;
  */
 public interface CalculatorVisitor<T> extends ParseTreeVisitor<T> {
 	/**
+	 * Visit a parse tree produced by {@link CalculatorParser#exp}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitExp(CalculatorParser.ExpContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link CalculatorParser#letexp}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitLetexp(@NotNull CalculatorParser.LetexpContext ctx);
-
+	T visitLetexp(CalculatorParser.LetexpContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link CalculatorParser#mathexp}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitMathexp(@NotNull CalculatorParser.MathexpContext ctx);
-
-	/**
-	 * Visit a parse tree produced by {@link CalculatorParser#exp}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitExp(@NotNull CalculatorParser.ExpContext ctx);
+	T visitMathexp(CalculatorParser.MathexpContext ctx);
 }

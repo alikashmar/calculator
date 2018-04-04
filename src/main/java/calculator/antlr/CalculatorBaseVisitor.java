@@ -1,8 +1,7 @@
-// Generated from Calculator.g4 by ANTLR 4.3
+// Generated from Calculator.g4 by ANTLR 4.7.1
 
 package calculator.antlr;
 
-import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**
@@ -20,21 +19,19 @@ public class CalculatorBaseVisitor<T> extends AbstractParseTreeVisitor<T> implem
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitLetexp(@NotNull CalculatorParser.LetexpContext ctx) { return visitChildren(ctx); }
-
+	@Override public T visitExp(CalculatorParser.ExpContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitMathexp(@NotNull CalculatorParser.MathexpContext ctx) { return visitChildren(ctx); }
-
+	@Override public T visitLetexp(CalculatorParser.LetexpContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
-	@Override public T visitExp(@NotNull CalculatorParser.ExpContext ctx) { return visitChildren(ctx); }
+	@Override public T visitMathexp(CalculatorParser.MathexpContext ctx) { return visitChildren(ctx); }
 }
