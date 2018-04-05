@@ -5,9 +5,10 @@ A calculator program in Java that evaluates expressions in a very simple integer
 The program takes an input on the command line, computes the result, and prints it to the console. For example:
 
 ```
-% java calculator.Main "add(2, 2)"
+java -cp target/calculator_<version>.jar calculator.Main "let(a, 5, add(a, a))"
 4
 ```
+Note: the jar file is the result of building the project using maven.
 
 Here are a few examples:
 
@@ -33,11 +34,11 @@ As with arithmetic functions, the value expression and the expression where the 
 ## Logging
 The program uses log4j2 framework for logging. You can set the log level in the log4j2.xml file directly or using command line:
 ```
-java calculator.Main -l debug "let(a, 5, add(a, a))"
+java -cp target/calculator_<version>.jar calculator.Main -l debug "let(a, 5, add(a, a))"
 
 or
 
-java calculator.Main --logLevel info let(a, 5, add(a, a))"
+java -cp target/calculator_<version>.jar calculator.Main --logLevel info let(a, 5, add(a, a))"
 ```
 
 Accepted values for the logLevel option are: error, warn, info, debug, or trace (case insensitive).
